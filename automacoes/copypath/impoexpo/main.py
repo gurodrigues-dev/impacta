@@ -1,14 +1,12 @@
 import shutil
 import os
+from dotenv import find_dotenv, load_dotenv
 
-# Exemplo de como a pasta na função = move_file() deve ser passada
-# windows_way_home = "C:/Users/gulima/Desktop/impacta/automacoes/copypath/exemplo_sinqia"
-# destination = "C:/Users/gulima/Desktop/impacta/automacoes/copypath/importacoes"
+load_dotenv(find_dotenv('environment.env'))
 
 
 def move_file(name_file: str, origin: str, destination: str):
     try:
-
         for root, dirs, files in os.walk(origin):
             list = []
             for file in files:
@@ -31,24 +29,33 @@ def move_file(name_file: str, origin: str, destination: str):
         return
 
     except Exception as err:
-        pass
+        print(err)
 
 
 def main():
 
-    origin_search = "C:/Users/gulima/Desktop/impacta/automacoes/copypath/exemplo_sinqia"
-    destination_search = "C:/Users/gulima/Desktop/impacta/automacoes/copypath/importacoes"
-    files_for_move_search = ["BVBG.028.02", "BVBG.086.01"]
+    origin_old = os.getenv('originOld')
+    destination_old = os.getenv('destinationOld')
+    files_for_move_old = ["BVBG.028.02", "BVBG.086.01"]
 
-    for file_for_move in files_for_move_search:
-        move_file(file_for_move, origin_search, destination_search)
+    for file_for_move in files_for_move_old:
+        move_file(file_for_move, origin_old, destination_old)
 
-    origin = "C:/Users/gulima/Desktop/impacta/automacoes/copypath/exemplo_sinqia"
-    destination = "C:/Users/gulima/Desktop/impacta/automacoes/copypath/importacoes"
-    files_for_move = ["BVBG.043.01", "BVBG.044.01",
-                      "BVBG.024.01", "Indic_", "Premio"]
-    for file_for_move in files_for_move:
-        move_file(file_for_move, origin, destination)
+    '''
+
+    origin_old_fee = os.getenv('originOldFee')
+    destination_old_fee = os.getenv('destinationOldFee')
+    files_for_move_old_fee = ["BVBG.043.01", "BVBG.044.01",
+                              "BVBG.024.01"]
+    for file_for_move in files_for_move_old_fee:
+        move_file(files_for_move_old_fee, origin_old_fee, destination_old_fee)
+
+    files_for_move_old_continue = ["Indic_", "Premio"]
+
+    for file_for_move in files_for_move_old_continue:
+        move_file(files_for_move_old_continue, origin_old, destination_old)
+
+    '''
 
 
 if __name__ == "__main__":
