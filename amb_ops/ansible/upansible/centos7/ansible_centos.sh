@@ -22,3 +22,18 @@ vim hosts
 
 # acessando o arquivo de configurações do ansible
 vim ansible.cfg
+
+# pingando as máquinas 
+ansible distros
+
+# atualizando apt das máquinas
+ansible distros -a "apt-get update"
+
+# testando tempo de "up" das máquinas
+ansible distros -a "uptime"
+
+# inserindo playbook para instalação do nginx
+vim playbook.yml
+
+# executando playbook
+ansible-playbook playbook.yml
