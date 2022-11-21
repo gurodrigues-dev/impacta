@@ -1,3 +1,19 @@
+Aqui está todo conteúdo que estudamos durante o semestre, com exemplos e explicado de uma forma "simples".
+
+Separado pelos tópicos e número da aula.
+
+- Filas e Pilhas
+	- Filas
+	- Pilhas 
+
+- Orientação a Objetos
+	- Lembretes
+	- Relacionamento entre Classes
+	- Encapsulamento
+	- Herança
+	- Polimorfismo
+	- Classe Abstrata
+
 # Filas e Pilhas - AULA 11
 > O conceito de filas e pilhas é bem simples, um é contrário do outro.
 
