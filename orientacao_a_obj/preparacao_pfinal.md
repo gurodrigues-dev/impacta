@@ -106,7 +106,7 @@
 
      # Retorno esperado "Gustavo Rodrigues 18 Rua Impacta 2 999"
 
-     ```
+    ```
 
 ## Encapsulamento - AULA 8
 > Simples. O conceito de encapsulamento é quando uma classe não deve ser usada de forma pública, como assim?
@@ -117,8 +117,9 @@ Geralmente nas outras linguagens utilizamos o private <Class> ou private <métod
 
 Mas no Python, não funciona assim, você deve utilizar dois underscores para determinar essa classe privada.
 
-- Segue o exemplo no Python:
 > No exemplo abaixo horas trabalhas e salario, serão privados.
+- Segue o exemplo no Python:
+	
     ```python
     class Funcionario():
         def __init__(self, nome, cargo, valor_hora_trabalhada):
@@ -134,7 +135,7 @@ Mas no Python, não funciona assim, você deve utilizar dois underscores para de
 	def calcula_salario(self):
 	     self.__salario = self.__horas_trabalhadas * self.valor_hora_trabalhada
 
-    ```
+    
 
 ## Herança - AULA 9
 Quando uma classe filha (subclasse) herda atributos de uma classe mae (superclasse)
@@ -177,7 +178,7 @@ Quando uma classe filha (subclasse) herda atributos de uma classe mae (superclas
 Quando uma sublcasse, utiliza metodos de uma classe maior
 
     Exemplo:
-    ```python
+```python
     class Pessoa():
 	def __init__(self, nome, idade):
 	    self.nome = nome
@@ -198,20 +199,21 @@ Quando uma sublcasse, utiliza metodos de uma classe maior
 
     # Retorno 
     "Gustavo da classe Aluno da idade 18 está falando."
-    ```
+```
 
 ## Classe Abstrata - AULA 11
 A classe abstrata sempre tem a importação da lib ABC, conforme o exemplo abaixo:
-    ```python
+
+```python
     import abc
 
     # Caso precise de métodos abstratos, será necessário a importação dos metodos abstratos 
 
     from abc import ABC, abstractmethod
-    ```
+```
 
-    Criando uma classe abstrata e em seguida usando um método abstrato
-    ```python
+Criando uma classe abstrata e em seguida usando um método abstrato
+```python
     from abc import ABC, abstractmethod
 
     class Pessoa(ABC):
@@ -222,9 +224,10 @@ A classe abstrata sempre tem a importação da lib ABC, conforme o exemplo abaix
     @abstractmethod
     def exibir_alunos(self)
   	pass
-    ```
+```
+    
 
 ## Possíveis questões
 
 - Quais são os 4 pilares da Orientação a Objetos.
-    R: Polimorfismo, Herança, Encapsulamento e Classes Abstratas.
+R: Polimorfismo, Herança, Encapsulamento e Classes Abstratas.
