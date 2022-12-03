@@ -1,0 +1,5 @@
+FROM python:3.10.2-alpine
+WORKDIR /app
+COPY . /app
+CMD chmod 777 src/main.py
+
