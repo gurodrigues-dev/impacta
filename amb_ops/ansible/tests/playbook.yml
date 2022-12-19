@@ -1,9 +1,0 @@
----
-- name: Instalar o ngninx
-  hosts: distros
-  become: yes
-  tasks:
-  - name: Instalar servidor web
-    package:
-      name: nginx
-      state: present
